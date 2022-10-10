@@ -10,7 +10,7 @@ const Home = () => {
     <div className="w-11/12 mx-auto">
       <Banner />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-32">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-32">
         {quizTopics.map((quiz) => (
           <QuizCard key={quiz.id} quiz={quiz} />
         ))}
