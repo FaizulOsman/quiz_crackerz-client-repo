@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100 border">
+    <div className="navbar bg-base-100 border w-11/12 mx-auto">
       <div className="navbar-start">
         <Link className="btn btn-ghost normal-case text-xl">QuizQween</Link>
       </div>
