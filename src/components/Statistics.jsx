@@ -23,7 +23,7 @@ const Statistics = () => {
   return (
     <div className="my-20">
       <h2 className="text-lg sm:text-3xl font-semibold text-center mb-8">
-        Rechart of Total Questions
+        Recharts of Total Questions of every topic
       </h2>
       <ResponsiveContainer width="80%" className="mx-auto" height={300}>
         <LineChart data={data}>

@@ -4,7 +4,7 @@ A Quiz platform for making yourself perfect on your chosen topic.
 
 ## Live Link
 
-Hosted in Netlify -> ////////////////
+Hosted in Netlify -> https://b6-quiz-crackerz-faizulosman.netlify.app/
 
 ## What used in this app
 

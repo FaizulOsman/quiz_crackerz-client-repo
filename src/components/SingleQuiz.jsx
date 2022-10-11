@@ -5,7 +5,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const SingleQuiz = ({ quiz }) => {
-  const { correctAnswer, id, options, question } = quiz;
+  const { id, correctAnswer, options, question } = quiz;
 
   const handleSelectedAnswer = (option) => {
     if (option === correctAnswer) {
@@ -24,63 +24,66 @@ const SingleQuiz = ({ quiz }) => {
       <div className="card bg-base-100 border shadow-xl">
         <div className="card-body">
           <div className="flex justify-between">
-            <h2 className="card-title text-center mb-4">Quiz : {question}</h2>
+            <h2 className="card-title text-center mb-4">
+              Quiz {}: {question}
+            </h2>
             <button
               onClick={() => showCorrectAnwer(correctAnswer)}
               className="btn bg-base-100 border-none"
+              title="See correct answer"
             >
               <FontAwesomeIcon icon={faEye} />
             </button>
           </div>
-          <div className="grid grid-cols-2 gap-2">
-            <div className="border border-primary rounded-md flex items-center h-full py-4">
-              <label
-                onClick={() => handleSelectedAnswer(options[0])}
-                className="label cursor-pointer"
-              >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+            <div
+              onClick={() => handleSelectedAnswer(options[0])}
+              className="border border-primary rounded-md flex items-center h-full py-4"
+            >
+              <label className="label cursor-pointer">
                 <input
                   type="radio"
-                  name="radio-6"
-                  className="radio checked:bg-blue-500 sm:mx-5"
+                  name={`radio-${id}`}
+                  className="radio checked:bg-blue-500 mx-5"
                 />
                 <span className="label-text">{options[0]}</span>
               </label>
             </div>
-            <div className="border border-primary rounded-md flex items-center h-full py-4">
-              <label
-                onClick={() => handleSelectedAnswer(options[1])}
-                className="label cursor-pointer"
-              >
+            <div
+              onClick={() => handleSelectedAnswer(options[1])}
+              className="border border-primary rounded-md flex items-center h-full py-4"
+            >
+              <label className="label cursor-pointer">
                 <input
                   type="radio"
-                  name="radio-6"
-                  className="radio checked:bg-blue-500 sm:mx-5"
+                  name={`radio-${id}`}
+                  className="radio checked:bg-blue-500 mx-5"
                 />
                 <span className="label-text">{options[1]}</span>
               </label>
             </div>
-            <div className="border border-primary rounded-md flex items-center h-full py-4">
-              <label
-                onClick={() => handleSelectedAnswer(options[2])}
-                className="label cursor-pointer"
-              >
+            <div
+              onClick={() => handleSelectedAnswer(options[2])}
+              className="border border-primary rounded-md flex items-center h-full py-4"
+            >
+              <label className="label cursor-pointer">
                 <input
                   type="radio"
-                  name="radio-6"
-                  className="radio checked:bg-blue-500 sm:mx-5"
+                  name={`radio-${id}`}
+                  className="radio checked:bg-blue-500 mx-5"
                 />
                 <span className="label-text">{options[2]}</span>
               </label>
             </div>
-            <div className="border border-primary rounded-md flex items-center h-full py-4">
-              <label
-                onClick={() => handleSelectedAnswer(options[3])}
-                className="label cursor-pointer"
-              >
+            <div
+              onClick={() => handleSelectedAnswer(options[3])}
+              className="border border-primary rounded-md flex items-center h-full py-4"
+            >
+              <label className="label cursor-pointer">
                 <input
                   type="radio"
-                  name="radio-6"
-                  className="radio checked:bg-blue-500 sm:mx-5"
+                  name={`radio-${id}`}
+                  className="radio checked:bg-blue-500 mx-5"
                 />
                 <span className="label-text">{options[3]}</span>
               </label>

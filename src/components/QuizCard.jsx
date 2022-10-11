@@ -7,14 +7,14 @@ const QuizCard = ({ quiz }) => {
   const { id, logo, name, total } = quiz;
 
   return (
-    <div className="card bg-base-100 shadow-xl border">
+    <div className="card bg-accent shadow-xl">
       <figure>
         <img src={logo} alt="Shoes" />
       </figure>
       <div className="card-body">
         <h2 className="card-title">
           {name}
-          <div className="badge badge-secondary">Total {total}</div>
+          <div className="badge badge-secondary">Quiz {total}</div>
         </h2>
         <p>
           Any fool can write code that a computer can understand. Good

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
-    <div className="card lg:card-side bg-base-100 shadow-xl border mt-10">
+    <div className="card lg:card-side bg-accent shadow-xl mt-10">
       <figure>
         <img
           className="w-full"
