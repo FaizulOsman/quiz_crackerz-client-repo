@@ -1,3 +1,5 @@
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -19,8 +21,12 @@ const QuizCard = ({ quiz }) => {
           programmers write code that humans can understand.
         </p>
         <div className="card-actions justify-end">
-          <Link to={`/quiz/${id}`} className="badge badge-outline">
-            Start Practice
+          <Link
+            to={`/quiz/${id}`}
+            className="badge badge-outline hover:bg-primary p-4"
+          >
+            <span className="mr-2">Start Practice</span>
+            <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>
           </Link>
         </div>
       </div>
