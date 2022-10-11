@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -13,16 +13,16 @@ const Navbar = () => {
           <div className="hidden md:block">
             <ul className="menu menu-horizontal p-0">
               <li>
-                <Link to="/">Home</Link>
+                <NavLink to="/home">Home</NavLink>
               </li>
               <li>
-                <Link to="/topics">Topics</Link>
+                <NavLink to="/topics">Topics</NavLink>
               </li>
               <li>
-                <Link to="/statistics">Statistics</Link>
+                <NavLink to="/statistics">Statistics</NavLink>
               </li>
               <li>
-                <Link to="/blog">Blog</Link>
+                <NavLink to="/blog">Blog</NavLink>
               </li>
             </ul>
           </div>

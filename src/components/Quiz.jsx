@@ -11,7 +11,7 @@ const Quiz = () => {
       <h2 className="text-4xl font-semibold text-center mb-10">
         Quiz of {quizses.name}
       </h2>
-      <div className="grid grid-cols-1 lg:grid-cols-1 gap-4">
+      <div className="grid grid-cols-1 gap-4">
         {questions.map((quiz) => (
           <SingleQuiz key={quiz.id} quiz={quiz} />
         ))}

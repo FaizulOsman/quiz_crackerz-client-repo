@@ -1,15 +1,17 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+import { Link, useRouteError } from "react-router-dom";
 
-class ErrorPage extends Component {
-  render() {
-    return (
+const ErrorPage = () => {
+  const errorMessage = useRouteError();
+  console.log(errorMessage);
+  return (
+    <div>
       <section className="flex items-center h-screen p-16 bg-base-100 text-gray-900">
         <div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
-            className="w-40 h-40 text-gray-600"
+            className="w-40 h-40 text-red-500"
           >
             <path
               fill="currentColor"
@@ -32,23 +34,25 @@ class ErrorPage extends Component {
             ></polygon>
           </svg>
           <div className="max-w-md text-center">
-            <h2 className="mb-8 font-extrabold text-9xl text-gray-600">
-              <span className="sr-only">Error</span>404
+            <h2 className="mb-4 font-extrabold text-6xl text-red-400">
+              {/* <span className="sr-only">Error</span> */}
+              {errorMessage.status}
             </h2>
-            <p className="text-2xl font-semibold md:text-3xl mb-8">
+            <p className="text-2xl font-semibold text-red-500 md:text-3xl mb-4">
+              {errorMessage.statusText}
+            </p>
+            <p className="text-2xl font-semibold text-gray-600 md:text-3xl mb-8">
               Sorry, we couldn't find this page.
             </p>
-            <Link
-              to="/"
-              className="px-8 py-3 font-semibold rounded bg-cyan-200 text-gray-900"
-            >
+
+            <Link to="/" className="px-8 btn btn-primary py-3 font-semibold">
               Back to homepage
             </Link>
           </div>
         </div>
       </section>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default ErrorPage;
