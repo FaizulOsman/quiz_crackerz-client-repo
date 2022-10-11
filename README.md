@@ -18,6 +18,8 @@ Link: https://openapi.programming-hero.com/api/quiz
 
 ## What used in this app
 
+In this website Tailwind, daisyUI, Toastify, Recharts and FontAwesome are used properly.
+
 ### React Router Dom
 
 Link: https://reactrouter.com/en/main
