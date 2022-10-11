@@ -12,7 +12,9 @@ const Banner = () => {
         />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">New album is released!</h2>
+        <h2 className="card-title">
+          Common Questions are added in the blog page!
+        </h2>
         <p>
           Learning is not attained by chance, it must be sought for with ardor
           and attended to with diligence.

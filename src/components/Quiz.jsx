@@ -5,7 +5,7 @@ import SingleQuiz from "./SingleQuiz";
 const Quiz = () => {
   const quizses = useLoaderData().data;
   const questions = quizses.questions;
-  //   console.log(quizses.data.name);
+  console.log(quizses);
   return (
     <div className="w-11/12 md:w-6/12 mx-auto my-14">
       <h2 className="text-4xl font-semibold text-center mb-10">
