@@ -4,12 +4,13 @@ import React from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const SingleQuiz = ({ quiz }) => {
+const SingleQuiz = ({ quiz, index, setCount, count }) => {
   const { id, correctAnswer, options, question } = quiz;
 
   const handleSelectedAnswer = (option) => {
     if (option === correctAnswer) {
       toast.success("Answer is correct!", { autoClose: 700 });
+      setCount(count + 1);
     } else {
       toast.error("Ans is Wrong!", { autoClose: 700 });
     }
@@ -25,7 +26,7 @@ const SingleQuiz = ({ quiz }) => {
         <div className="card-body">
           <div className="flex justify-between">
             <h2 className="card-title text-center mb-4">
-              Quiz {}: {question}
+              Quiz {index + 1}: {question}
             </h2>
             <button
               onClick={() => showCorrectAnwer(correctAnswer)}
@@ -36,12 +37,10 @@ const SingleQuiz = ({ quiz }) => {
             </button>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-            <div
-              onClick={() => handleSelectedAnswer(options[0])}
-              className="border border-primary rounded-md flex items-center h-full py-4"
-            >
+            <div className="border border-primary rounded-md flex items-center h-full py-4">
               <label className="label cursor-pointer">
                 <input
+                  onClick={() => handleSelectedAnswer(options[0])}
                   type="radio"
                   name={`radio-${id}`}
                   className="radio checked:bg-blue-500 mx-5"
@@ -49,12 +48,10 @@ const SingleQuiz = ({ quiz }) => {
                 <span className="label-text">{options[0]}</span>
               </label>
             </div>
-            <div
-              onClick={() => handleSelectedAnswer(options[1])}
-              className="border border-primary rounded-md flex items-center h-full py-4"
-            >
+            <div className="border border-primary rounded-md flex items-center h-full py-4">
               <label className="label cursor-pointer">
                 <input
+                  onClick={() => handleSelectedAnswer(options[1])}
                   type="radio"
                   name={`radio-${id}`}
                   className="radio checked:bg-blue-500 mx-5"
@@ -62,12 +59,10 @@ const SingleQuiz = ({ quiz }) => {
                 <span className="label-text">{options[1]}</span>
               </label>
             </div>
-            <div
-              onClick={() => handleSelectedAnswer(options[2])}
-              className="border border-primary rounded-md flex items-center h-full py-4"
-            >
+            <div className="border border-primary rounded-md flex items-center h-full py-4">
               <label className="label cursor-pointer">
                 <input
+                  onClick={() => handleSelectedAnswer(options[2])}
                   type="radio"
                   name={`radio-${id}`}
                   className="radio checked:bg-blue-500 mx-5"
@@ -75,12 +70,10 @@ const SingleQuiz = ({ quiz }) => {
                 <span className="label-text">{options[2]}</span>
               </label>
             </div>
-            <div
-              onClick={() => handleSelectedAnswer(options[3])}
-              className="border border-primary rounded-md flex items-center h-full py-4"
-            >
+            <div className="border border-primary rounded-md flex items-center h-full py-4">
               <label className="label cursor-pointer">
                 <input
+                  onClick={() => handleSelectedAnswer(options[3])}
                   type="radio"
                   name={`radio-${id}`}
                   className="radio checked:bg-blue-500 mx-5"

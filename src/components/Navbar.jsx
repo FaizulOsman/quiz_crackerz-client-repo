@@ -6,7 +6,9 @@ const Navbar = () => {
     <div className="bg-accent">
       <div className="navbar bg-accent w-11/12 mx-auto">
         <div className="navbar-start">
-          <Link className="btn btn-ghost normal-case text-xl">QuizQween</Link>
+          <Link to="/" className="btn btn-ghost normal-case text-xl">
+            QuizQween
+          </Link>
         </div>
 
         <div className="navbar-end">

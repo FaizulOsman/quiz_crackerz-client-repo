@@ -1,10 +1,20 @@
 # QuizQueen Starter Repository
 
+# Project Nmae: b6-quiz-crackerz-FaizulOsman
+
 A Quiz platform for making yourself perfect on your chosen topic.
+
+## Project Code
+
+Link: https://github.com/programming-hero-web-course2/b6-quiz-crackerz-FaizulOsman
 
 ## Live Link
 
 Hosted in Netlify -> https://b6-quiz-crackerz-faizulosman.netlify.app/
+
+## API Link
+
+Link: https://openapi.programming-hero.com/api/quiz
 
 ## What used in this app
 
