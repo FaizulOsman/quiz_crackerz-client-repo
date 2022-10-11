@@ -1,36 +1,39 @@
 import React from "react";
+import { useLoaderData } from "react-router-dom";
 import {
   CartesianGrid,
   Line,
   LineChart,
+  ResponsiveContainer,
   Tooltip,
   XAxis,
   YAxis,
 } from "recharts";
 
 const Statistics = () => {
+  const quizData = useLoaderData().data;
+
   const data = [
-    { name: "Ass 1", marks: 60, quiz: 2400, amt: 2400 },
-    { name: "Ass 2", marks: 58, quiz: 1398, amt: 2210 },
-    { name: "Ass 3", marks: 60, quiz: 9800, amt: 2290 },
-    { name: "Ass 4", marks: 60, quiz: 3908, amt: 2000 },
-    { name: "Ass 5", marks: 60, quiz: 4800, amt: 2181 },
-    { name: "Ass 6", marks: 60, quiz: 3800, amt: 2500 },
-    { name: "Ass 7", marks: 60, quiz: 4300, amt: 2100 },
+    { name: quizData[0].name, total: quizData[0].total },
+    { name: quizData[1].name, total: quizData[1].total },
+    { name: quizData[2].name, total: quizData[2].total },
+    { name: quizData[3].name, total: quizData[3].total },
   ];
 
   return (
-    <div className="w-1/2 mx-auto my-20">
-      <h2 className="text-3xl font-semibold text-center mb-5">
-        Total marks Rechart
+    <div className="my-20">
+      <h2 className="text-lg sm:text-3xl font-semibold text-center mb-8">
+        Rechart of Total Questions
       </h2>
-      <LineChart width={700} height={400} data={data}>
-        <Line dataKey="marks" type="monotone" stroke="red" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <CartesianGrid stroke="lightgray" strokeDasharray="5 5" />
-        <Tooltip />
-      </LineChart>
+      <ResponsiveContainer width="80%" className="mx-auto" height={300}>
+        <LineChart data={data}>
+          <Line dataKey="total" type="monotone" stroke="red" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <CartesianGrid stroke="lightgray" strokeDasharray="5 5" />
+          <Tooltip />
+        </LineChart>
+      </ResponsiveContainer>
     </div>
   );
 };
